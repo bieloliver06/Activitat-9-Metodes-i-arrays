@@ -4,23 +4,21 @@
     {
         static void Main()
         {
-            Console.WriteLine("Introdueix el primer número: ");
-            int a = int.TryParse(Console.ReadLine(), out a);
-            Console.WriteLine("Introdueix el segon número: ");
-            int b = int.TryParse(Console.ReadLine(), out b);
-            Console.WriteLine("El número major és: " + Major(a, b));
+            int[] numbers = { 1, 200, 3, 4, 5, 6, 7, 8, 9, 10 };
+            Console.WriteLine("El número major és: " + Major(numbers));
         }
         
-        static int Major(int a, int b)
+        static int Major(int[] numbers)
         {
-            if (a > b)
+            int biggest = 0;
+            foreach (int number in numbers)
             {
-                return a;
+                if (number > biggest)
+                {
+                    biggest = number;
+                }   
             }
-            else
-            {
-                return b;
-            }
+            return biggest;
         }
     }
 }
