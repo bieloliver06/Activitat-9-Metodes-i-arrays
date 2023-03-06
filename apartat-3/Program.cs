@@ -12,11 +12,11 @@
         static int SumaParells(int[] array)
         {
             int suma = 0;
-            for (int i = 0; i < array.Length; i++)
+            foreach (int number in array)
             {
-                if (array[i] % 2 == 0)
+                if (number % 2 == 0)
                 {
-                    suma += array[i];
+                    suma += number;
                 }
             }
             return suma;
